@@ -1,13 +1,7 @@
 import React from 'react'
 
-const Genre = ({ name, description }) => {
-    return (
-        <div>
-            <h2>{name}</h2>
-            <p>{description}</p>
-        </div>
-    )
-}
+import Genre from './components/Genre'
+import Movie from './components/Movie'
 
 export default function App() {
     return (
@@ -17,10 +11,12 @@ export default function App() {
                 name="Science Fiction Films"
                 description="Sci fi movies use technology like fantasy to explore the human condition in new exciting ways."
             />
-            <h3>Alien</h3>
-            <p>Year: 1979</p>
-            <h3>Back to the Future</h3>
-            <p>Year: 1985</p>
+
+            <Movie title="Alien" year={1979} />
+            <Movie title="Back to the Future" year="1985" />
+            <Movie title="Blade Runner" year="1982" />
+            <Movie title="Star Wars" year="1977" />
+            <Movie title="The Matrix" year="1999" />
         </div>
     )
 }
